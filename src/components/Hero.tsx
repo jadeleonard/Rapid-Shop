@@ -28,7 +28,7 @@ const data = await prisma.shoes.findMany();
             <Card className='' key={items.id}>
         <CardContent key={items.id} className=''>
             <CardTitle>{items.name}</CardTitle>
-            <img src={items.image} width={400} height={200} />
+            {items.image && <img src={items.image} width={400} height={200}  />}
             
             <CardTitle>{items.price}</CardTitle>
             <CardTitle>{items.seller}</CardTitle>
